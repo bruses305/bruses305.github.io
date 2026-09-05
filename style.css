@@ -33,7 +33,7 @@ h2 {
 .card {
   background: #fff;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border-radius: 8px;
 }
 
@@ -68,4 +68,90 @@ h2 {
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+
+/* ===== Стили для фильтрации и анимации ===== */
+
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: 2px solid #333;
+  background: #f0f0f0;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: #ddd;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/* Контейнер для карточек */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Каждая карточка */
+.card {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: top center;
+}
+
+/* Скрытое состояние (для анимации исчезновения) */
+.card.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none; /* чтобы нельзя было кликнуть */
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, height 0.4s ease, margin 0.4s ease, padding 0.4s ease;
+}
+
+/* Анимация появления */
+.card.show {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .filter-buttons {
+    gap: 8px;
+  }
+  .filter-btn {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
 }

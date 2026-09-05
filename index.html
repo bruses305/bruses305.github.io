@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Soulver Studio</title>
-  <meta name="description" content="Soulver Studio — разработка мобильных приложений и игр.">
-  <meta name="author" content="Soulver Studio">
+  <meta name="description" content="Soulver Studio — разработка мобильных приложений и игр." />
+  <meta name="author" content="Soulver Studio" />
+  <meta name="google-site-verification" content="eYBFvZUpFrEgBHz7zuZHrbl6fvYKEKhthzjzrOqOtyw" />
 
-  <meta name="google-site-verification" content="eYBFvZUpFrEgBHz7zuZHrbl6fvYKEKhthzjzrOqOtyw">
-
-  <link rel="stylesheet" href="style.css">
+  <!-- Подключаем общий CSS (стили для фильтрации добавлены ниже) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="header">
   <h1>Soulver Studio</h1>
   <p>Разработчик мобильных приложений</p>
+
+  <!-- Кнопки фильтрации -->
+  <div class="filter-buttons">
+    <button class="filter-btn" data-filter="all">Все</button>
+    <button class="filter-btn active" data-filter="game">Игровые</button>
+    <button class="filter-btn" data-filter="system">Системные</button>
+  </div>
 </header>
 
 <main>
+  <section id="apps">
+    <h2>Мои приложения</h2>
 
-<section id="apps">
-  <h2>Мои приложения</h2>
+    <div class="cards-wrapper">
+      <!-- Карточка 1: Игровая -->
+      <article class="card" data-category="game">
+        <h3>Infinity Pong</h3>
+        <p>Infinity Pong — мобильная аркадная игра, в котором игрок отбивает мяч и старается продержаться как можно дольше, улучшая свой результат и соревнуясь в таблице лидеров.</p>
+        <div class="links">
+          <a href="https://play.google.com/store/apps/details?id=com.Soulver.InfinityPong" target="_blank">Google Play</a>
+          <a href="https://bruses305.github.io/Private-Policy-Infinity-Pong.html">Политика конфиденциальности</a>
+        </div>
+      </article>
 
-  <article class="card">
-    <h3>Infinity Pong</h3>
-    <p>Infinity Pong — мобильная аркадная игра, в котором игрок отбивает мяч и старается продержаться как можно дольше, улучшая свой результат и соревнуясь в таблице лидеров.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.Soulver.InfinityPong" target="_blank">Google Play</a>
-      <a href="Private-Policy-Infinity-Pong.html">Политика конфиденциальности</a>
+      <!-- Карточка 2: Игровая -->
+      <article class="card" data-category="game">
+        <h3>Build a Slime Path</h3>
+        <p>Аркадная головоломка с уникальной механикой.</p>
+        <div class="links">
+          <a href="https://play.google.com/store/apps/details?id=com.S0ulver.BildaSlimePath&hl=ru" target="_blank">Google Play</a>
+          <a href="BASP/Private-Policy-BuildASlimePath.html">Политика конфиденциальности</a>
+        </div>
+      </article>
+
+      <!-- Карточка 3: Системная -->
+      <article class="card" data-category="system">
+        <h3>Test Soulver Function</h3>
+        <p>Тестовое приложение для проверки функций и механик.</p>
+        <div class="links">
+          <a href="https://play.google.com/store/apps/details?id=com.Soulver.TestFunctionSoulver&hl=ru" target="_blank">Google Play</a>
+          <a href="STF/Private-Policy-SoulverTestFunction.html">Политика конфиденциальности</a>
+        </div>
+      </article>
+
+      <!-- Карточка 4: Системная -->
+      <article class="card" data-category="system">
+        <h3>YYCount</h3>
+        <p>Десктопное приложение на WPF для расчёта условных установок на основе оборудования. Приложение позволяет вести справочник оборудования, создавать расчёты с историей и редактировать данные прямо в таблице.</p>
+        <div class="links">
+          <a href="https://github.com/bruses305/YYCount" target="_blank">GitHub</a>
+          <a href="https://github.com/bruses305/YYCount/blob/master/LICENSE.txt">Лицензия</a>
+        </div>
+      </article>
     </div>
-  </article>
+  </section>
 
-  <article class="card">
-    <h3>Build a Slime Path</h3>
-    <p>Аркадная головоломка с уникальной механикой.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.S0ulver.BildaSlimePath&hl=ru" target="_blank">Google Play</a>
-      <a href="BASP/Private-Policy-BuildASlimePath.html">Политика конфиденциальности</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <h3>Test Soulver Function</h3>
-    <p>Тестовое приложение для проверки функций и механик.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.Soulver.TestFunctionSoulver&hl=ru" target="_blank">Google Play</a>
-      <a href="STF/Private-Policy-SoulverTestFunction.html">Политика конфиденциальности</a>
-    </div>
-  </article>
-</section>
-
-<!-- <section id="gallery">
-  <h2>Галерея</h2>
-  <div class="gallery">
-    <img src="images/app1.png" alt="Скриншот приложения">
-    <img src="images/app2.png" alt="Скриншот приложения">
-  </div>
-</section> -->
-
+  <!-- (закомментированная галерея) -->
+  <!-- <section id="gallery"> ... </section> -->
 </main>
 
 <footer class="footer">
@@ -67,5 +82,7 @@
   <p>© Soulver Studio</p>
 </footer>
 
+<!-- Подключаем внешний скрипт -->
+<script src="script.js"></script>
 </body>
 </html>
